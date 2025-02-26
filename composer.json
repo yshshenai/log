@@ -1,0 +1,39 @@
+{
+    "name": "leite/log",
+    "description": "日志记录",
+    "type": "library",
+    "version": "1.1.0",
+    "authors": [
+        {
+            "name": "tanjinhui",
+            "email": "792297773@qq.com"
+        }
+    ],
+    "config": {
+        "secure-http": false
+    },
+    "require": {
+        "php": "^7.3.0",
+        "topthink/framework": ">=5.1.0 <7.0.0",
+        "leite/extend-base": "^1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leite\\Log\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "Leite\\Log\\serviceProvider\\LeiteLogServiceProvider"
+            ]
+        }
+    }
+}
